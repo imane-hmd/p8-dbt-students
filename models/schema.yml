@@ -31,3 +31,26 @@ models:
         description: "Volume d'étudiants distincts."
         tests:
           - not_null
+
+  - name: mart_student_vs_insee_demographics
+    description: "Table de comparaison analytique de la représentativité sociodémographique (OpenClassrooms vs INSEE)."
+    columns:
+      - name: REGION
+        description: "Zone géographique analysée."
+        tests:
+          - not_null
+
+      - name: GENDER
+        description: "Genre analysé."
+        tests:
+          - not_null
+
+      - name: TOTAL_STUDENTS
+        description: "Nombre total d'étudiants observés."
+        tests:
+          - not_null
+
+      - name: TOTAL_POPULATION
+        description: "Nombre total d'habitants selon l'INSEE."
+        tests:
+          - not_null
