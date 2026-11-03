@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Données brutes hébergées dans Snowflake"
+    database: OC_DATA_P8
+    schema: RAW
+    tables:
+      - name: RAW_STUDENTS
+        description: "Données sociodémographiques des apprenants OpenClassrooms"
+        columns:
+          - name: USER_ID
+            description: "Identifiant unique de l'étudiant"
+          - name: PATH_CATEGORY_NAME
+            description: "Filière ou domaine du parcours"
+          - name: AGE_GROUP
+            description: "Classe d'âge de l'étudiant"
+          - name: GENDER
+            description: "Genre de l'étudiant"
+          - name: REGION
+            description: "Région de résidence de l'étudiant"
+          - name: YEAR_PATH_STARTED
+            description: "Année de début du parcours"
