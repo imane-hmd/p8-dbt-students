@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: int_students_cleaned
+    description: "Données étudiants nettoyées et filtrées sur le parcours Data."
+    columns:
+      - name: USER_ID
+        description: "Identifiant de l'étudiant."
+        tests:
+          - not_null
+
+      - name: AGE_GROUP
+        description: "Tranche d'âge de l'étudiant."
+        tests:
+          - not_null
+
+      - name: GENDER
+        description: "Genre standardisé de l'étudiant."
+        tests:
+          - not_null
+
+      - name: YEAR_PATH_STARTED
+        description: "Année de début de formation."
+        tests:
+          - not_null
+
+  - name: agg_students_demographics
+    description: "Table agrégée sociodémographique par cohorte, région, âge et genre."
+    columns:
+      - name: STUDENT_COUNT
+        description: "Volume d'étudiants distincts."
+        tests:
+          - not_null

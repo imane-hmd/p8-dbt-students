@@ -21,3 +21,20 @@ sources:
             description: "Région de résidence de l'étudiant"
           - name: YEAR_PATH_STARTED
             description: "Année de début du parcours"
+
+  - name: insee_data
+    description: "Données démographiques externes issues de l'INSEE"
+    database: OC_DATA_P8
+    schema: PUBLIC
+    tables:
+      - name: RAW_INSEE_POPULATION
+        description: "Données démographiques brutes par région, tranche d'âge et genre"
+        columns:
+          - name: REGION
+            description: "Département ou région géographique"
+          - name: AGE_GROUP
+            description: "Tranche d'âge"
+          - name: POPULATION
+            description: "Volume de population"
+          - name: GENDER
+            description: "Genre (Homme ou Femme)"
