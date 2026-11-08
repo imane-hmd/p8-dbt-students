@@ -9,7 +9,7 @@ cleaned AS (
         COALESCE(MAX(age_group), 'Non renseigné') AS age_group,
         CASE 
             WHEN UPPER(TRIM(MAX(gender))) IN ('F', 'FEMALE', 'FEMME') THEN 'Femme'
-            WHEN UPPER(TRIM(gender)) IN ('M', 'MALE', 'HOMME') THEN 'Homme'
+            WHEN UPPER(TRIM(MAX(gender))) IN ('M', 'MALE', 'HOMME') THEN 'Homme'
             ELSE 'Non renseigné'
         END AS gender,
         COALESCE(TRIM(MAX(region)), 'Inconnue') AS region,
