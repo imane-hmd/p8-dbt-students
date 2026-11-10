@@ -1,3 +1,15 @@
+/*
+  =============================================================================
+  MODÈLE INTERMEDIATE : interpop_region_sex
+  =============================================================================
+  - Rôle : Agrégation démographique par région administrative et par genre.
+  - Traitements appliqués :
+      * Croisement géographique et calcul de la répartition hommes / femmes.
+      * Calcul des volumes et proportions régionaux (notamment la part Île-de-France).
+      * Structuration des métriques pour comparaison avec les données INSEE de référence.
+  =============================================================================
+*/
+
 with base_insee as (
 
     select * from {{ ref('stg_pop_region_sexe') }}
