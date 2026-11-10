@@ -1,3 +1,15 @@
+/*
+  =============================================================================
+  MODÈLE INTERMEDIATE : int_students_cleaned
+  =============================================================================
+  - Rôle : Nettoyage, standardisation et fiabilisation des profils apprenants.
+  - Règles appliquées :
+      * Déduplication technique pour retenir les 4 010 apprenants uniques.
+      * Typage et harmonisation des données démographiques (âge, genre, localisation).
+      * Préparation des données pour les jointures et l'exposition finale.
+  =============================================================================
+*/
+
 WITH source AS (
     SELECT * FROM {{ ref('stg_students') }}
 ),
