@@ -1,3 +1,11 @@
+# =============================================================================
+# COUCHE STAGING : Documentation et tests des modèles sources
+# =============================================================================
+# Rôle : Définir la structure, documenter les champs et tester la qualité
+# des données brutes (unicité, non-nullité) avant transformation.
+# =============================================================================
+
+
 version: 2
 
 models:
