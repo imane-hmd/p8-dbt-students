@@ -1,3 +1,14 @@
+/*
+  =============================================================================
+  MODÈLE STAGING : stg_pop_region_sexe
+  =============================================================================
+  - Rôle : Nettoyage et typage initial des données démographiques régionales INSEE.
+  - Traitements appliqués :
+      * Typage des années en entier et population en numérique.
+      * Nettoyage des chaînes de caractères (régions, genre, tranches d'âge).
+  =============================================================================
+*/
+
 with source_insee as (
 
     select * from {{ source('raw_insee', 'pop_region_sexe') }}
