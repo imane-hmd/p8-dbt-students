@@ -1,3 +1,15 @@
+/*
+  =============================================================================
+  MODÈLE INTERMEDIATE : inter_etudiant
+  =============================================================================
+  - Rôle : Enrichissement et segmentation métier des profils étudiants.
+  - Traitements appliqués :
+      * Croisement des données académiques et parcours de formation.
+      * Structuration des variables sociodémographiques (tranches d'âge, genre).
+      * Harmonisation des libellés pour l'alimentation des tables d'analyse finale.
+  =============================================================================
+*/
+
 with base_students as (
 
     select * from {{ ref('int_students_cleaned') }}
