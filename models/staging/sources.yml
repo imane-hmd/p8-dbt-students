@@ -1,3 +1,11 @@
+# =============================================================================
+# SOURCES BRUTES : Déclaration des tables d'origine Snowflake / Data Warehouse
+# =============================================================================
+# - raw_data  : Table des apprenants (RAW_STUDENTS)
+# - raw_insee : Référentiel démographique INSEE (pop_region_sexe)
+# =============================================================================
+
+
 version: 2
 
 sources:
