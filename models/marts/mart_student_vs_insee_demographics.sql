@@ -1,3 +1,16 @@
+/*
+  =============================================================================
+  DATA MART : students_vs_insee_demographic
+  =============================================================================
+  - Rôle : Table finale de comparaison benchmark entre la population apprenante et les données INSEE.
+  - Usages analytiques :
+      * Confrontation directe de la répartition sociodémographique (apprenants vs population nationale/régionale).
+      * Mesure des écarts de représentativité sur les critères de genre, de tranches d'âge et de localisation.
+      * Mise en évidence de la surreprésentation francilienne par rapport à la moyenne nationale INSEE.
+      * Support chiffré des recommandations stratégiques présentées en soutenance.
+  =============================================================================
+*/
+
 with analyse as (
 
     select
