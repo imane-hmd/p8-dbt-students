@@ -1,0 +1,64 @@
+# =============================================================================
+# COUCHE STAGING : Documentation et tests des modèles sources
+# =============================================================================
+# Rôle : Définir la structure, documenter les champs et tester la qualité
+# des données brutes (unicité, non-nullité) avant transformation.
+# =============================================================================
+
+
+version: 2
+
+models:
+  - name: int_students_cleaned
+    description: "Données étudiants nettoyées et filtrées sur le parcours Data."
+    columns:
+      - name: USER_ID
+        description: "Identifiant de l'étudiant."
+        tests:
+          - not_null
+
+      - name: AGE_GROUP
+        description: "Tranche d'âge de l'étudiant."
+        tests:
+          - not_null
+
+      - name: GENDER
+        description: "Genre standardisé de l'étudiant."
+        tests:
+          - not_null
+
+      - name: YEAR_PATH_STARTED
+        description: "Année de début de formation."
+        tests:
+          - not_null
+
+  - name: agg_students_demographics
+    description: "Table agrégée sociodémographique par cohorte, région, âge et genre."
+    columns:
+      - name: STUDENT_COUNT
+        description: "Volume d'étudiants distincts."
+        tests:
+          - not_null
+
+  - name: mart_student_vs_insee_demographics
+    description: "Table de comparaison analytique de la représentativité sociodémographique (OpenClassrooms vs INSEE)."
+    columns:
+      - name: REGION
+        description: "Zone géographique analysée."
+        tests:
+          - not_null
+
+      - name: GENDER
+        description: "Genre analysé."
+        tests:
+          - not_null
+
+      - name: TOTAL_STUDENTS
+        description: "Nombre total d'étudiants observés."
+        tests:
+          - not_null
+
+      - name: TOTAL_POPULATION
+        description: "Nombre total d'habitants selon l'INSEE."
+        tests:
+          - not_null
